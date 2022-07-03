@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Domrato<span>No</span>bi
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Gallary</a>
+                <a href="#">contact</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-search"></i>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h1>Capture the moments by your heart</h1>
+            <input type="text" name="" placeholder="search here....">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+        
+    </header>
+    <section class="filtergallery">
+        <div class="portfoliomenu">
+            <ul>
+                <li class="active" data-filter="*">ALL</li>
+                <li data-filter=".nature">Nature</li>
+                <li data-filter=".fashion">fashion</li>
+                <li data-filter=".wedding">wedding</li>
+            </ul>
+        </div>
+        <div class="portfolio-item">
+            <div class="item nature">
+                <img src="img/p1.jpg" width="100" height="100">
+            </div>
+            <div class="item fashion">
+                <img src="img/p2.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="img/p3.jpg" width="100" height="100">
+            </div>
+            <div class="item nature">
+                <img src="img/p4.jpg" width="100" height="100">
+            </div>
+            <div class="item fashion">
+                <img src="img/p5.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="img/p6.jpg" width="100" height="100">
+            </div>
+            <div class="item nature">
+                <img src="img/p7.jpg" width="100" height="100">
+            </div>
+            <div class="item fashion">
+                <img src="img/p8.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="img/p9.jpg" width="100" height="100">
+            </div>
+        </div>
+    </section>
+    <section class="member">
+        <div class="member-info">
+            <h1>our <span>Information</span></h1>
+            <p>members information here</p>
+        </div>
+        <div class="member-card">
+            <img src="img/member.png">
+            <p>this is the best website until now we have used it and loved it.</p>
+            <h2>*maria sharapova</h2>
+            <img src="img/icon1.png" width="100">
+            <img src="img/icon2.png" width="100">
+            <img src="img/icon3.png" width="100">
+            <img src="img/icon4.png" width="100">
+            
+        </div>
+        <div class="m-images">
+            <img src="img/s1.jpg">
+            <img src="img/s2.jpg">
+            <img src="img/s3.jpg">
+            <img src="img/s4.jpg">
+            <img src="img/s5.jpg">
+            <img src="img/s6.jpg">
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+        <div>
+            <h2>Subscribe to newsletter</h2>
+            <p>this is the news letter</p>
+        </div>
+        <div class="ntext">
+            <label>
+            <input type="text" name="" placeholder="Enter email">
+            <button>Subscribe</button>
+        </label>
+        </div>
+        </div>
+        <div class="f-contact">
+            <div>
+                <h1>Information</h1>
+                <p>this is simple text about the the campany information</p>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-telegram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+            <div>
+                <h1>Usefull links</h1>
+                <p>About us</p>
+                <p>Gellary</p>
+                <p>blog post</p>
+                <p>Pricing plan</p>
+            </div>
+            <div>
+                <h1>Details</h1>
+                <p>Photography</p>
+                <p>Gellary</p>
+                <p>blog post</p>
+                <p>Pricing plan</p>
+            </div>
+            <div>
+                <h1>Help & Support</h1>
+                <p>Privacy policy</p>
+                <p>Term and Conditions</p>
+                <p>Technical Support</p>
+                <p>Customer care</p>
+            </div>
+
+            
+
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+    $('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+$('.portfoliomenu ul li').click(function(){
+$('.portfoliomenu ul li').removeClass('active');
+$(this).addClass('active');
+var selector = $(this).attr('data-filter');
+$('.portfolio-item').isotope({
+    filter:selector
+});
+return false;
+});
+
+</script>
+
+</body>
+</html>
